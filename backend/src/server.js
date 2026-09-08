@@ -5,10 +5,14 @@ const connectdb = require("./config/db");
 
 const port=process.env.PORT;
 
-app.get("/home",(req,res)=>
-{
-    res.send("this is home page");
-});
+
+const menu=require("./routes/menu");
+app.use("/menu",menu);
+
+
+
+
+
 
 
 const startserver=async()=>
