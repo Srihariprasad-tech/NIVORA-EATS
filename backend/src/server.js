@@ -6,12 +6,6 @@ const connectdb = require("./config/db");
 const port=process.env.PORT;
 
 
-const menu=require("./routes/menu");
-app.use("/menu",menu);
-
-
-
-
 
 
 
