@@ -1,26 +1,14 @@
 const express=require('express');
 const app=express();
 
-const menuroutes=require("./routes/menuroutes");
+const errohandler=require("./middleware/errohandler");
+const createroute=require("./routes/userRoutes");
 
 app.use(express.json());
-app.use("/api/menu",menuroutes);
-
-
-
-const menu=require("./routes/menu");
- app.use("/menu",menu); 
- const middlewarerouter=require("./routes/middleware");
- app.use("/middleware",middlewarerouter);
-
- const testroutes=require("./routes/testroutes");
- app.use("/api/test",testroutes);
-
- app.use("/api/read",testroutes);
- app.use("/api/readone/",testroutes);
-
-app.use("/api/update/",testroutes);
-app.use("/api/delete",testroutes);
-const errohandler=require("./middleware/errohandler");
 app.use(errohandler);
+
+
+app.use("/create",createroute);
+app.use("/read",createroute);
+app.use("/delete",createroute); 
 module.exports=app;
