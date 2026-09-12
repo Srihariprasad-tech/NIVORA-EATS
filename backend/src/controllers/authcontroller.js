@@ -24,11 +24,12 @@ const login=async(req,res,next)=>
 {
     try{
         const result=await authservices.login(req.body);
-        const user=result.toObject();
+        const user=result.user.toObject();
         delete user.password;
         res.status(200).json({
             message:"login successful",
-            result:user
+            token:result.token,
+            user
         });
     }
     catch(error)

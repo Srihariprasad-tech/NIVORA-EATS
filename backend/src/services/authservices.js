@@ -1,5 +1,6 @@
 const newuser=require("../models/user");
 const bcrypt=require("bcrypt");
+const jwt=require("jsonwebtoken");
 
 
 //register userr//
@@ -34,7 +35,20 @@ if(!ismatch)
 {
     throw new Error("invalid email or password");
 }
-return existinguser;
+const token=jwt.sign(
+    {
+        userid:existinguser._id,
+        role:existinguser.role,
+    },
+    process.env.JWT_SECRET,
+    {
+        expiresIn:"1hr"
+    }
+);
+return {
+    token,
+    user:existinguser
+};
 };
 
 module.exports={
