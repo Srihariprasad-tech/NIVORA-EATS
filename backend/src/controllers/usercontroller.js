@@ -1,20 +1,5 @@
 const user=require("../models/user");
 const userservices=require("../services/userservices");
-//post request//
-const createuser=async(req,res,next)=>
-{
-    try{
-    const result=await userservices.userval(req.body);
-    res.status(200).json({
-        success:true,
-        message:"user created successfully"
-    });
-    }
-    catch(error)
-    {
-        next(error)
-    }
-};
 
 // get request//
 const read=async(req,res,next)=>

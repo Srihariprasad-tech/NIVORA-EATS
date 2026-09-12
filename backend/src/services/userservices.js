@@ -1,15 +1,11 @@
 const user=require("../models/user");
-// create
-const userval=async(data)=>
-{
-    const dataval=await user.create(data);
-    return dataval;
-}
+const bcrypt=require("bcrypt");
+
 
 //read
 const getusers=async()=>
 {
-    const all=await user.find();
+    const all=await user.find().select("-password");
     return all;
 }
 
@@ -52,4 +48,5 @@ module.exports={
     onemem,
     newguy,
     delguy
+
 };
