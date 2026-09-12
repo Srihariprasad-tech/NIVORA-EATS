@@ -1,6 +1,5 @@
 const express=require("express");
 const router=express.Router();
-const validate=require("../middleware/uservalidation");
 const createuser=require("../controllers/usercontroller");
 
 router.get("/",createuser.read);

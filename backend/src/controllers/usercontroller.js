@@ -1,4 +1,3 @@
-const user=require("../models/user");
 const userservices=require("../services/userservices");
 
 // get request//
@@ -72,7 +71,6 @@ const del=async(req,res,next)=>
 
 
 module.exports={
-    createuser,
     read,
     one,
     update,

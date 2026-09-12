@@ -10,7 +10,7 @@ app.use(express.json());
 
 
 app.use("/users",createroute);
-app.use("/new",authroute);
+app.use("/auth",authroute);
 app.use((req,res)=>
 {
     res.status(404).json({

@@ -1,4 +1,3 @@
-const newuser=require("../models/user");
 const authservices=require("../services/authservices");
 
 const mem=async(req,res,next)=>

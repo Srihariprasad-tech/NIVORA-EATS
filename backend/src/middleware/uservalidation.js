@@ -1,5 +1,4 @@
 const Joi = require("joi");
-const joi=require("joi");
 const userschema=Joi.object({
     name:Joi.string()
     .trim()
@@ -9,6 +8,7 @@ const userschema=Joi.object({
 
 email:Joi.string()
 .trim()
+.email()
 .lowercase()
 .required(),
 
