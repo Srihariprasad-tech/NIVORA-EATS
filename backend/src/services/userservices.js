@@ -43,7 +43,6 @@ const delguy=async(data)=>
 
 
 module.exports={
-    userval,
     getusers,
     onemem,
     newguy,
