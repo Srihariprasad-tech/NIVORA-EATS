@@ -5,10 +5,9 @@ const errohandler=require("./middleware/errohandler");
 const createroute=require("./routes/userRoutes");
 
 app.use(express.json());
+
+
+
+app.use("/users",createroute);
 app.use(errohandler);
-
-
-app.use("/create",createroute);
-app.use("/read",createroute);
-app.use("/delete",createroute); 
 module.exports=app;
