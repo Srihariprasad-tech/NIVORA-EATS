@@ -11,7 +11,6 @@ app.use(express.json());
 
 app.use("/users",createroute);
 app.use("/auth",authroute);
-app.use("/",authroute);
 app.use((req,res)=>
 {
     res.status(404).json({

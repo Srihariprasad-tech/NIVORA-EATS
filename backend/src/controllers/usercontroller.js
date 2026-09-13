@@ -65,7 +65,22 @@ const del=async(req,res,next)=>
     }
 }
 
+// seeing the profile//
 
+const profile=async(req,res,next)=>
+{
+    try{
+        res.status(200).json({
+            success:true,
+            message:"you accessed a procted route",
+            user:req.user
+        });
+    }
+    catch(error)
+    {
+        next(error);
+    }
+}
 
 
 
@@ -74,5 +89,6 @@ module.exports={
     read,
     one,
     update,
-    del
+    del,
+    profile
 }
