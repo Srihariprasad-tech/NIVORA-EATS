@@ -24,7 +24,7 @@ const userschema=new mongoose.Schema({
         type:String,
         required:true,
         enum:["user","admin"],
-        default:"user"
+        default:"admin"
     },
     phone:{
         type:String,
