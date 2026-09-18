@@ -7,7 +7,7 @@ const foodschema=mongoose.Schema({
         minlength:10,
         maxlength:30
     },
-    shortdescription:{
+    shortDescription:{
         type:String,
         trim:true,
         maxlength:200
@@ -40,7 +40,7 @@ const foodschema=mongoose.Schema({
         trim:true,
         index:true
     },
-    foodtype:{
+    foodType:{
         type:String,
         required:true,
        enum:["veg","non-veg"],
@@ -48,7 +48,7 @@ const foodschema=mongoose.Schema({
     },
     category:{
         type:String,
-        requried:true,
+        required:true,
         trim:true,
         index:true,
     },
@@ -63,7 +63,7 @@ const foodschema=mongoose.Schema({
                 type:String,
                 required:true,
             },
-            alttext:{
+            altText:{
                 type:String,
                 default:""
             }
@@ -75,7 +75,7 @@ const foodschema=mongoose.Schema({
             trim:true,
         }
     ],
-    spicelevel:{
+    spiceLevel:{
         type:String,
         enum:[
             "mild",
@@ -85,29 +85,30 @@ const foodschema=mongoose.Schema({
         ],
         default:"medium",
     },
-    servingsize:{
+    servingSize:{
         type:String,
         required:true,
         trim:true,
     },
-    preprationtime:{
+    preparationTime:{
         type:Number,
-        default:true,
+        required:true,
+        min:1,
         index:true,
     },
-    isavailabel:{
+    isAvailable:{
         type:Boolean,
         default:true,
         index:true,
     },
-    isactive:{
+    isActive:{
         type:Boolean,
         default:true,
         index:true,
     },
     cook:{
    type:mongoose.Schema.Types.ObjectId,
-   ref:"User",
+   ref:"User", 
    required:true,
    index:true
     }
@@ -116,4 +117,4 @@ const foodschema=mongoose.Schema({
     timestamps:true
 }
 );
-module.exports=mongoose.model("food",foodschema);
+module.exports=mongoose.model("Food",foodschema);
