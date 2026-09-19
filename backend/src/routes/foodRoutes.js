@@ -5,7 +5,10 @@ const authmidd=require("../middleware/authmiddleware");
 
 router.post("/",authmidd,food.create);
 router.get("/all",food.getall);
+router.get("/myfoods",authmidd,food.myfood);
 router.get("/:id",food.id);
-router.patch("/:id",food.patch);
-router.delete("/:id",food.deletee);
+router.patch("/:id",authmidd,food.patch);
+router.patch("/:id/avaliablity",authmidd,food.ava);
+router.delete("/:id",authmidd,food.deletee);
+router.get("/:id",food.cooks);
 module.exports=router;

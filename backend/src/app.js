@@ -13,6 +13,7 @@ app.use(express.json());
 app.use("/users",createroute);
 app.use("/auth",authroute);
 app.use("/food",foodroute);
+app.use("/cook",foodroute);
 app.use((req,res)=>
 {
     res.status(404).json({

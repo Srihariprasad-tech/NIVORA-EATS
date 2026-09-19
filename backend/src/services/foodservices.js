@@ -29,24 +29,78 @@ const idd=async(data)=>
 }
 
 //updatethefood//
-const patchfood=async(id,data)=>
+const patchfood=async(id,userId,data)=>
 {
-const done=await food.findByIdAndUpdate(id,data,
-{
-    new:true
-});
+const done=await food.findOneAndUpdate(
+    {
+     _id:id,
+     cook:userId
+ },
+ data,
+ {
+    new:true,
+ }
+);
+return done;
 }
 
 //deletethefood//
-const deletefood=async(data)=>
+const deletefood=async(id,userId)=>
 {
-    const del=food.findByIdAndDelete(data);
+    const del=await food.findByIdAndDelete(
+        {
+            _id:id,
+            cook:userId
+        }
+    );
     return del;
 }
+
+//myfoodss//
+const myfoods=async(userId)=>
+{
+const fdd=await food.find({
+    cook:userId
+});
+return fdd;
+}
+// update ava//
+
+const upda=async(id,foodid,data)=>
+{
+    const mod=await food.findByIdAndUpdate(
+        {
+         _id:id,
+         cook:foodid
+        },data,
+
+        {
+ new:true,
+    }
+);
+return mod;
+}
+
+// all data of the cook//
+ 
+const ckk=async(data)=>
+{
+    const coo=await food.find(
+        {
+     cook:data
+        }
+    );
+    return coo;
+}
+
+
 module.exports={
     createfood,
     getall,
     idd,
     patchfood,
-    deletefood
+    deletefood,
+    myfoods,
+    upda,
+    ckk
 }

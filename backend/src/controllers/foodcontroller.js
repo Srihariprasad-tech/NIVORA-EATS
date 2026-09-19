@@ -55,8 +55,12 @@ const patch=async(req,res,next)=>
 {
     try{
         const id=req.params.id;
+        const userId=req.user.userid;
         const data=req.body;
-        const updatedfood=await foodservices.patchfood(id,data);
+  console.log("FOOD ID:", id);
+        console.log("USER ID:", userId);
+        console.log("DATA:", data);
+        const updatedfood=await foodservices.patchfood(id,userId,data);
         res.json({
             message:"food updated",
             updatedfood
@@ -73,7 +77,8 @@ const deletee=async(req,res,next)=>
 {
 try{
     const id=req.params.id;
-    const delfood=await foodservices.deletefood(id);
+    const userId=req.user
+    const delfood=await foodservices.deletefood(id,userId);
     res.json({
         message:"food deleted",
     });
@@ -84,11 +89,73 @@ catch(error)
 }
 }
 
+//getmyfood//
+const myfood=async(req,res,next)=>
+{
+    try{
+        const foodid=req.user.userid;
+        const fd=await foodservices.myfoods(foodid);
+        res.json({
+            message:"my foods of the user",
+            fd
+        });
+    }
+    catch(error)
+    {
+        next(error);
+    }
+}
+
+//update availibiltiy//
+const ava=async(req,res,next)=>
+{
+    try{
+        const id=req.params.id;
+        const foodid=req.user.userid;
+        const data=req.body;
+        const up=await foodservices.upda(id,foodid,data);
+        res.json({
+            success:true,
+            message:"avalibilty is updated",
+            up
+        });
+    }
+    catch(error)
+    {
+        next(error);
+    }
+}
+
+// cook data by id//
+const cooks=async(req,res,next)=>
+{
+    try{
+        const id=req.params.id;
+        console.log(id);
+        const ck=await foodservices.ckk(id);
+        res.json({
+            success:true,
+            message:"the foods of the user is",
+            ck,
+        });
+    }
+    catch(error)
+    {
+next(error);
+    }
+}
+
+
+
+
 
 module.exports={
     create,
     getall,
     id,
     patch,
-    deletee
+    deletee,
+    myfood,
+    ava,
+    cooks
 }
