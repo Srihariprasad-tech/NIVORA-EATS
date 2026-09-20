@@ -12,13 +12,96 @@ const createfood=async(data,userid)=>
 }
 
 // getallfood//
-
-const getall=async()=>
+const getall=async(query)=>
 {
-    const allfo=await food.find();
-    return allfo;
+    const filter={};
+    //search //
+    if(query.search)
+    {
+     filter.$or=[
+        {
+        name:{
+            $regex:query.search,
+            $options:"i"
+        }
+        },
+        {
+            shortDescription:{
+                $regex:query.search,
+                $options:"i"
+            }
+        },
+        {
+            description:{
+                $regex:query.search,
+                $options:"i"
+            }
+        }
+     ]
+    }
+  //filter//
+ if (query.cuisine) {
+        filter.cuisine = query.cuisine;
+    }
+    if (query.region) {
+        filter.region = query.region;
+    }
+    if (query.foodType) {
+        filter.foodType = query.foodType;
+    }
+    if (query.category) {
+        filter.category = query.category;
+    }
+//min/max filter//
+  if (query.minPrice || query.maxPrice) {
+
+        filter.price = {};
+
+        if (query.minPrice) {
+            filter.price.$gte = Number(query.minPrice);
+        }
+
+        if (query.maxPrice) {
+            filter.price.$lte = Number(query.maxPrice);
+        }
+    }
+//pagination//
+const page=Number(query.page)||1;
+const limit=Number(query.limit)||10;
+const skip=(page-1)*limit;
+
+// sorting//
+let sort={};
+if(query.sort==="price_asc")
+{
+    sort.price=1;
+}
+if(query.sort==="price_desc")
+{
+    sort.price=-1;
+}
+else{
+    sort.createdAt=-1;
 }
 
+
+
+//count documents//
+const total=await food.countDocuments(filter);
+
+    const allfo = await food
+    .find(filter)
+    .skip(skip)
+    .limit(limit);
+
+return {
+    foods: allfo,
+    total,
+    page,
+    limit,
+    totalPages: Math.ceil(total / limit)
+};
+}
 
 //getfoodbyid
 

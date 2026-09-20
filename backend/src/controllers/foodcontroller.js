@@ -4,7 +4,6 @@ const foodservices=require("../services/foodservices.js");
 const create=async(req,res,next)=>
 {
     try{
-        console.log("USER:", req.user);
 const data=await foodservices.createfood(
     req.body,
     req.user.userid
@@ -24,7 +23,7 @@ res.json({
 const getall=async(req,res,next)=>
 {
     try{
-        const foods=await foodservices.getall();
+        const foods=await foodservices.getall(req.query);
         res.json({
             message:"all foods ",
             foods
@@ -77,7 +76,7 @@ const deletee=async(req,res,next)=>
 {
 try{
     const id=req.params.id;
-    const userId=req.user
+    const userId=req.user.userid
     const delfood=await foodservices.deletefood(id,userId);
     res.json({
         message:"food deleted",
