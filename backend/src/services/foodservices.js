@@ -76,7 +76,7 @@ if(query.sort==="price_asc")
 {
     sort.price=1;
 }
-if(query.sort==="price_desc")
+ else if(query.sort==="price_desc")
 {
     sort.price=-1;
 }
