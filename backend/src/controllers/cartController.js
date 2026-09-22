@@ -19,6 +19,26 @@ const add=async(req,res,next)=>
     }
 }
 
+//get all cart //
+const allcart=async(req,res,next)=>
+{
+    try{
+        const userid=req.user.userid;
+        const carts=await cartserv.getcarts(userid);
+        res.json({
+            success:true,
+            message:"all carts displayed",
+            carts
+        });
+    }
+    catch(error)
+    {
+        next(error);
+    }
+}
+
+
 module.exports={
-    add
+    add,
+    allcart
 }

@@ -63,6 +63,20 @@ const cartfod = async (data, userId) => {
     return userCart;
 };
 
-module.exports = {
-    cartfod
-};
+
+//get allcarts
+
+const getcarts=async(data)=>
+{
+    const dataa=await cart.findOne({
+        user:data
+    });
+    return dataa;
+}
+
+
+
+module.exports={
+    cartfod,
+    getcarts
+}
