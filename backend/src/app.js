@@ -5,6 +5,7 @@ const errohandler=require("./middleware/errohandler");
 const createroute=require("./routes/userRoutes");
 const authroute=require("./routes/authRoutes");
 const foodroute=require("./routes/foodRoutes.js");
+const cartroute=require("./routes/cartRoutes.js");
 
 app.use(express.json());
 
@@ -14,6 +15,7 @@ app.use("/users",createroute);
 app.use("/auth",authroute);
 app.use("/food",foodroute);
 app.use("/cook",foodroute);
+app.use("/cart",cartroute);
 app.use((req,res)=>
 {
     res.status(404).json({
