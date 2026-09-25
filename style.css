@@ -76,7 +76,7 @@ button{
 .button-signup{
     background-color: #F4C430;
     color: #2F3E2E;
-    transition:0.3s ease;
+    transition: all 0.3s ease-in-out;
     border:none;
     padding:10px 10px;
 }
