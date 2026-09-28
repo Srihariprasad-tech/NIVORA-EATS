@@ -25,7 +25,7 @@ const login=async(data)=>
 
 if(!existinguser)
 {
-    throw new Error("invalid email or password");
+    throw new Error("enter email and password ");
 }
 const ismatch=await bcrypt.compare(
     data.password,

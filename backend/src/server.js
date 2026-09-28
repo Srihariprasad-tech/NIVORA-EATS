@@ -12,7 +12,7 @@ const port=process.env.PORT;
 const startserver=async()=>
 {
     try{
-        await connectdb();
+        await connectdb()
         app.listen(port,()=>
 {
     console.log(`server is listening on the port no ${port}`);

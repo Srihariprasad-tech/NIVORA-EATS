@@ -6,6 +6,8 @@ const createroute=require("./routes/userRoutes");
 const authroute=require("./routes/authRoutes");
 const foodroute=require("./routes/foodRoutes.js");
 const cartroute=require("./routes/cartRoutes.js");
+const addressroute=require("./routes/addressRoutes.js");
+const checkoutroute=require("./routes/checkoutRoutes.js");
 
 app.use(express.json());
 
@@ -16,6 +18,9 @@ app.use("/auth",authroute);
 app.use("/food",foodroute);
 app.use("/cook",foodroute);
 app.use("/cart",cartroute);
+app.use("/address",addressroute);
+app.use("/checkout",checkoutroute);
+
 app.use((req,res)=>
 {
     res.status(404).json({
