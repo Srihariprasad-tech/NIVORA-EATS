@@ -8,6 +8,7 @@ const foodroute=require("./routes/foodRoutes.js");
 const cartroute=require("./routes/cartRoutes.js");
 const addressroute=require("./routes/addressRoutes.js");
 const checkoutroute=require("./routes/checkoutRoutes.js");
+const paymentorders=require("./routes/paymentsRoutes.js");
 
 app.use(express.json());
 
@@ -20,6 +21,7 @@ app.use("/cook",foodroute);
 app.use("/cart",cartroute);
 app.use("/address",addressroute);
 app.use("/checkout",checkoutroute);
+app.use("/payment",paymentorders);
 
 app.use((req,res)=>
 {

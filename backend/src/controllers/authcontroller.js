@@ -19,7 +19,7 @@ const mem=async(req,res,next)=>
     }
 }
 
-//login route//
+//login route
 const login=async(req,res,next)=>
 {
     try{
@@ -37,6 +37,28 @@ const login=async(req,res,next)=>
         next(error);
     }
 }
+
+// const login = async (req, res, next) => {
+//     try {
+
+//         console.log("🔥 LOGIN CONTROLLER");
+//         console.log("LOGIN BODY:", req.body);
+
+//         const result = await authservices.login(req.body);
+
+//         const user = result.user.toObject();
+//         delete user.password;
+
+//         res.status(200).json({
+//             message: "login successful",
+//             token: result.token,
+//             user
+//         });
+
+//     } catch (error) {
+//         next(error);
+//     }
+// };
 
 
 module.exports={
