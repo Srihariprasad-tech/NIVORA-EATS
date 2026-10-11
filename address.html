@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Addresses , Nivora Eats</title>
+  <link rel="stylesheet" href="address.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo"><img src="img_logo.jpeg" alt="Nivora Eats Logo"></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="food-list.html">Explore Food</a>
+      <a href="address.html" class="active">My Addresses</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <div>
+        <p class="eyebrow">YOUR DELIVERY DETAILS</p>
+        <h1>My Addresses</h1>
+        <p class="subtitle">Manage your saved addresses for easy delivery.</p>
+      </div>
+      <a href="#add-address" class="btn btn-primary">+ Add Address</a>
+    </section>
+
+    <section class="address-section">
+      <h2>Saved Addresses <span class="count">2</span></h2>
+
+      <div class="address-grid">
+        <article class="address-card default-card">
+          <div class="card-top">
+            <span class="address-icon">⌂</span>
+            <span class="badge">Default Address</span>
+          </div>
+          <h3>Home</h3>
+          <p class="person">Your Name</p>
+          <p class="address-text">
+            House No. 12, Green Street,<br>
+            Pune, Maharashtra - 411001
+          </p>
+          <div class="card-actions">
+            <button class=" btn btn-outline" type="button">Edit</button>
+            <button class=" btn btn-danger-outline" type="button">Delete</button>
+          </div>
+        </article>
+
+        <article class="address-card">
+          <div class="card-top">
+            <span class="address-icon">⌖</span>
+            <button class="set-default" type="button">Set as Default</button>
+          </div>
+          <h3>College</h3>
+          <p class="person">Your Name</p>
+          <p class="address-text">
+            House No. 5, College Road,<br>
+            Pune, Maharashtra - 411005
+          </p>
+          <div class="card-actions">
+            <button class=" btn btn-outline" type="button">Edit</button>
+            <button class=" btn btn-danger-outline" type="button">Delete</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="form-section" id="add-address">
+      <h2>Add a New Address</h2>
+      <p class="subtitle">Enter your delivery details below.</p>
+
+      <form class="address-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="house">House No. / Flat No.</label>
+            <input id="house" name="house" type="text"
+                   placeholder="e.g. Flat 204" required>
+          </div>
+
+          <div class="form-group">
+            <label for="street">Street / Area</label>
+            <input id="street" name="street" type="text"
+                   placeholder="Enter street or area" required>
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            <input id="city" name="city" type="text"
+                   placeholder="Enter city" required>
+          </div>
+
+          <div class="form-group">
+            <label for="pincode">Pincode</label>
+            <input id="pincode" name="pincode" type="text"
+                   inputmode="numeric" pattern="[0-9]{6}"
+                   maxlength="6" placeholder="6-digit pincode" required>
+          </div>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" name="makeDefault">
+          Make this my default address
+        </label>
+
+        <button class="btn btn-primary" type="submit">Save Address</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with care by Nivora Eats ♥️</p>
+  </footer>
+</body>
+</html>
