@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout, Nivora Eats</title>
+  <link rel="stylesheet" href="checkout.css">
+  <script src="checkout.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="brand">
+      <img src="img_logo.jpeg" alt="Nivora Eats Logo">
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="food-list.html">Explore Food</a>
+      <a href="address.html">My Addresses</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <p class="eyebrow">FRESH FOOD, MADE WITH CARE</p>
+      <h1>Checkout</h1>
+      <p>Review your order and choose your delivery address.</p>
+    </section>
+
+    <div id="page-message" class="message" role="status">
+      Loading your checkout details...
+    </div>
+
+    <div class="checkout-layout">
+      <div class="left-column">
+
+        <!-- Delivery Address -->
+        <section class="panel">
+          <div class="section-heading">
+            <span class="step">1</span>
+            <div>
+              <h2>Delivery Address</h2>
+              <p class="muted">Where should we deliver your food?</p>
+            </div>
+          </div>
+
+          <div id="address-list" class="address-list">
+            <p class="muted">Loading saved addresses...</p>
+          </div>
+
+          <a href="address.html" class="text-link">
+            + Manage saved addresses
+          </a>
+        </section>
+
+        <!-- Cart Summary -->
+        <section class="panel">
+          <div class="section-heading">
+            <span class="step">2</span>
+            <div>
+              <h2>Your Order</h2>
+              <p class="muted">Your selected homemade food.</p>
+            </div>
+          </div>
+
+          <div id="cart-items">
+            <p class="muted">Loading cart items...</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Bill Details -->
+      <aside class="panel bill-panel">
+        <h2>Bill Details</h2>
+
+        <div class="bill-row">
+          <span>Item Total</span>
+          <strong id="item-total">₹0</strong>
+        </div>
+
+        <div class="bill-row">
+          <span>Delivery Fee</span>
+          <strong id="delivery-fee">₹0</strong>
+        </div>
+
+        <div class="bill-row">
+          <span>Taxes</span>
+          <strong id="taxes">₹0</strong>
+        </div>
+
+        <div class="bill-row grand-total">
+          <span>Total Amount</span>
+          <strong id="grand-total">₹0</strong>
+        </div>
+
+        <p class="note">
+          ♥️ Freshly prepared by our home cooks.
+        </p>
+
+        <button id="place-order" class="btn btn-primary" type="button" disabled>
+          Place Order
+        </button>
+
+        <p id="order-message" class="order-message" role="status"></p>
+
+        <a href="food-list.html" class="back-link">
+          ← Continue exploring food
+        </a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    Made with care by Nivora Eats ♥️
+  </footer>
+
+</body>
+</html>
