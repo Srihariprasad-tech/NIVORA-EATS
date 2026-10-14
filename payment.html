@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Nivora Eats</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="img_logo.jpeg" alt="Nivora Eats Logo">
+            
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="food-list.html">Explore Food</a>
+            <a href="address.html">My Addresses</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <main class="payment-container">
+
+        <div class="page-heading">
+            <p class="eyebrow">ALMOST THERE!</p>
+            <h1>Complete Your Payment</h1>
+            <p>Fresh homemade food is just one step away.</p>
+        </div>
+
+        <div class="payment-layout">
+
+            <!-- Left Section -->
+            <section class="payment-left">
+
+                <!-- Order Summary -->
+                <div class="card">
+                    <h2>Order Summary</h2>
+                    <p class="muted">Review your order before payment.</p>
+
+                    <div class="food-item">
+                        <div class="food-icon">🍱</div>
+
+                        <div class="food-info">
+                            <h3>Your Homemade Meal</h3>
+                            <p>Quantity: 1</p>
+                        </div>
+
+                        <span class="price">₹180</span>
+                    </div>
+
+                    <div class="bill-row">
+                        <span>Item Total</span>
+                        <span>₹180</span>
+                    </div>
+
+                    <div class="bill-row">
+                        <span>Delivery Fee</span>
+                        <span>₹30</span>
+                    </div>
+
+                    <div class="bill-row">
+                        <span>Taxes</span>
+                        <span>₹9</span>
+                    </div>
+
+                    <div class="bill-row total-row">
+                        <strong>Total Amount</strong>
+                        <strong>₹219</strong>
+                    </div>
+
+                    <p class="demo-note">
+                        
+                    </p>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="card payment-method">
+                    <h2>Payment Method</h2>
+                    <p class="muted">Choose a secure way to pay.</p>
+
+                    <div class="gateway-option">
+                        <div class="razorpay-icon">R</div>
+
+                        <div class="gateway-info">
+                            <h3>Razorpay Secure Checkout</h3>
+                            <p>UPI, Cards, Net Banking and Wallets</p>
+                        </div>
+
+                        <span class="selected-icon">✓</span>
+                    </div>
+
+                    <div class="security-note">
+                        <span>🔒</span>
+                        <p>
+                            Your payment will be processed securely.
+                            Never share your OTP or PIN with anyone.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Right Section -->
+            <aside class="payment-right">
+                <div class="card amount-card">
+
+                    <p class="muted">AMOUNT TO PAY</p>
+                    <h2 class="payable-amount">₹219</h2>
+
+                    <div class="divider"></div>
+
+                    <div class="bill-row">
+                        <span>Items</span>
+                        <span>₹180</span>
+                    </div>
+
+                    <div class="bill-row">
+                        <span>Delivery</span>
+                        <span>₹30</span>
+                    </div>
+
+                    <div class="bill-row">
+                        <span>Taxes</span>
+                        <span>₹9</span>
+                    </div>
+
+                    <button type="button" id="pay-now-btn" class="pay-button">
+                        Pay Now ₹219
+                        <span>→</span>
+                    </button>
+
+                    <p id="payment-message" class="payment-message"
+                       role="status" aria-live="polite"></p>
+
+                    <p class="secure-text">
+                        🔐 Secure payment powered by Razorpay
+                    </p>
+
+                    <a href="checkout.html" class="back-link">
+                        ← Back to Checkout
+                    </a>
+                </div>
+
+                <div class="help-card">
+                    <span class="help-icon">💬</span>
+                    <div>
+                        <h3>Need help?</h3>
+                        <p>Contact our support team if you face any payment issues.</p>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Made with ❤️ for homemade food lovers.</p>
+        <p>© 2026 Nivora Eats</p>
+    </footer>
+
+</body>
+</html>
