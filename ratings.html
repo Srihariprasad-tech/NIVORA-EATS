@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews & Ratings | Nivora Eats</title>
+  <link rel="stylesheet" href="ratings.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="brand">
+      <img src="img_logo.jpeg" alt="Nivora Eats">
+      
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="food-list.html">Explore Food</a>
+      <a href="orders.html">My Orders</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="page-heading">
+      <p class="eyebrow">SHARE YOUR EXPERIENCE</p>
+      <h1>Reviews & Ratings</h1>
+      <p>Your feedback helps home cooks serve better food.</p>
+    </section>
+
+    <section class="review-layout">
+
+      <div class="review-form-card">
+        <h2>Write a Review</h2>
+        <p class="subtitle">Tell others about your homemade food experience.</p>
+
+        <form>
+          <div class="form-group">
+            <label for="food">Select Food Item</label>
+            <select id="food" name="food" required>
+              <option value="">Choose a food item</option>
+              <option>Homemade Maharashtrian Thali</option>
+              <option>Paneer Sabji with Roti</option>
+              <option>Dal Rice Meal</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Your Rating</label>
+            <div class="rating-options">
+              <label><input type="radio" name="rating" value="1" required><span>★</span></label>
+              <label><input type="radio" name="rating" value="2"><span>★</span></label>
+              <label><input type="radio" name="rating" value="3"><span>★</span></label>
+              <label><input type="radio" name="rating" value="4"><span>★</span></label>
+              <label><input type="radio" name="rating" value="5"><span>★</span></label>
+            </div>
+            <p class="hint">Choose from 1 star to 5 stars.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="review-title">Review Title</label>
+            <input
+              type="text"
+              id="review-title"
+              name="title"
+              placeholder="Give your review a title"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="review-text">Your Review</label>
+            <textarea
+              id="review-text"
+              name="review"
+              rows="5"
+              placeholder="How was the taste, quality and packaging?"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Submit Review
+          </button>
+
+          <p class="form-note">
+            Your review helps other customers choose their food.
+          </p>
+        </form>
+      </div>
+
+      <aside class="rating-summary">
+        <p class="eyebrow">CUSTOMER FEEDBACK</p>
+        <h2>What People Say</h2>
+
+        <div class="overall-rating">
+          <strong>4.8</strong>
+          <div>
+            <div class="stars">★★★★★</div>
+            <p>Based on sample reviews</p>
+          </div>
+        </div>
+
+        <div class="rating-bar">
+          <span>5 stars</span>
+          <div><span style="width: 85%"></span></div>
+          <small>85%</small>
+        </div>
+
+        <div class="rating-bar">
+          <span>4 stars</span>
+          <div><span style="width: 10%"></span></div>
+          <small>10%</small>
+        </div>
+
+        <div class="rating-bar">
+          <span>3 stars</span>
+          <div><span style="width: 3%"></span></div>
+          <small>3%</small>
+        </div>
+
+        <div class="rating-bar">
+          <span>2 stars</span>
+          <div><span style="width: 1%"></span></div>
+          <small>1%</small>
+        </div>
+
+        <div class="rating-bar">
+          <span>1 star</span>
+          <div><span style="width: 1%"></span></div>
+          <small>1%</small>
+        </div>
+
+        <p class="summary-note">
+         
+        </p>
+      </aside>
+
+    </section>
+
+    <section class="customer-reviews">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">REAL FOOD, REAL EXPERIENCES</p>
+          <h2>Customer Reviews</h2>
+        </div>
+      </div>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="avatar">A</div>
+          <div class="reviewer-info">
+            <h3>Ananya</h3>
+            <p>Ordered Homemade Maharashtrian Thali</p>
+          </div>
+          <span class="verified">✓ Verified order</span>
+        </div>
+
+        <div class="stars">★★★★★</div>
+        <h4>Just like home!</h4>
+        <p class="review-description">
+          The food was tasty and fresh. I really enjoyed the homemade
+          flavours and the overall quality.
+        </p>
+        <p class="review-date">Sample review</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="avatar avatar-brown">R</div>
+          <div class="reviewer-info">
+            <h3>Rahul</h3>
+            <p>Ordered Paneer Sabji with Roti</p>
+          </div>
+          <span class="verified">✓ Verified order</span>
+        </div>
+
+        <div class="stars">★★★★☆</div>
+        <h4>Good taste and quality</h4>
+        <p class="review-description">
+          The meal was satisfying and nicely packed. I would like to
+          order from this cook again.
+        </p>
+        <p class="review-date">Sample review</p>
+      </article>
+
+    </section>
+
+    <div class="back-link">
+      <a href="orders.html">← Back to My Orders</a>
+    </div>
+
+  </main>
+
+  <footer>
+    Made with care, just like homemade food. © 2026 Nivora Eats
+  </footer>
+
+</body>
+</html>
