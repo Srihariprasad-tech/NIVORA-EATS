@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Nivora Eats</title>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+     <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+
+<body>
+
+    
+    <header class="navbar">
+
+        <div class="logo">
+            <img src="img_logo.jpeg" alt="Nivora Eats Logo">
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Users</a>
+            <a href="#">Foods</a>
+            <a href="#">Orders</a>
+            <a href="#">Profile</a>
+            
+            <a href="#" class="logout">Logout</a>
+            
+        </nav>
+
+    </header>
+
+
+    
+    <main class="admin-container">
+
+        <div class="page-header">
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Manage registered users of Nivora Eats.</p>
+            </div>
+
+            <div class="admin-badge">
+                <i class="fa-solid fa-user-shield"></i>
+                Admin
+            </div>
+        </div>
+
+
+        
+        <section class="users-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>Users</h2>
+                    <p>View and manage registered users.</p>
+                </div>
+
+                <div class="user-count">
+                    <i class="fa-solid fa-users"></i>
+                    <span>4 Users</span>
+                </div>
+            </div>
+
+
+            
+            <div class="table-wrapper">
+
+                <table class="users-table">
+
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>User</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>01</td>
+
+                            <td>
+                                <div class="user-info">
+                                    <div class="user-avatar">A</div>
+                                    <span>Aryan Shete</span>
+                                </div>
+                            </td>
+
+                            <td>aryan@example.com</td>
+
+                            <td>
+                                <span class="role customer">
+                                    Customer
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="delete-btn">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>02</td>
+
+                            <td>
+                                <div class="user-info">
+                                    <div class="user-avatar">P</div>
+                                    <span>Priya Patil</span>
+                                </div>
+                            </td>
+
+                            <td>priya@example.com</td>
+
+                            <td>
+                                <span class="role cook">
+                                    Home Cook
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="delete-btn">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>03</td>
+
+                            <td>
+                                <div class="user-info">
+                                    <div class="user-avatar">R</div>
+                                    <span>Rahul Jadhav</span>
+                                </div>
+                            </td>
+
+                            <td>rahul@example.com</td>
+
+                            <td>
+                                <span class="role customer">
+                                    Customer
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="delete-btn">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>04</td>
+
+                            <td>
+                                <div class="user-info">
+                                    <div class="user-avatar">S</div>
+                                    <span>Sneha Kulkarni</span>
+                                </div>
+                            </td>
+
+                            <td>sneha@example.com</td>
+
+                            <td>
+                                <span class="role cook">
+                                    Home Cook
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="delete-btn">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    
+    <footer class="footer">
+        <p>© 2026 Nivora Eats. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
