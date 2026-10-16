@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Food Item | Nivora Eats</title>
+
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="cook-dashboard.css">
+
+</head>
+
+<body>
+
+    <!--  NAVBAR -->
+
+    <nav class="navbar">
+
+       
+        <div class="logo">
+            <img src="img_logo.jpeg" alt="Nivora Eats Logo">
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="#">Home</a>
+
+            <a href="#">Menu</a>
+
+            <a href="#">My Foods</a>
+
+            <a href="#">Orders</a>
+
+            <a href="#">Profile</a>
+
+            <a href="#" class="logout-btn">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    
+
+    <main class="add-food-page">
+
+        <div class="add-food-container">
+
+            <div class="page-heading">
+
+                <h1>Add Food Item</h1>
+
+                <p>
+                    Add a new homemade dish to your Nivora Eats menu.
+                </p>
+
+            </div>
+
+            <section class="form-card">
+
+                <form>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="dish-name">
+                                Dish Name
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-utensils"></i>
+
+                                <input
+                                    type="text"
+                                    id="dish-name"
+                                    placeholder="Enter dish name"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="price">
+                                Price
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                                <input
+                                    type="number"
+                                    id="price"
+                                    placeholder="Enter price"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="description">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="description"
+                            rows="5"
+                            placeholder="Describe your homemade dish..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="food-image">
+                            Food Image
+                        </label>
+
+                        <div class="upload-box">
+
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                            <h3>
+                                Upload Food Image
+                            </h3>
+
+                            <p>
+                                Add a clear photo of your homemade dish
+                            </p>
+
+                            <input
+                                type="file"
+                                id="food-image"
+                                accept="image/*"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group quantity-group">
+
+                        <label for="quantity">
+                            Quantity Available
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-box"></i>
+
+                            <input
+                                type="number"
+                                id="quantity"
+                                min="1"
+                                placeholder="Enter available quantity"
+                            >
+
+                        </div>
+
+                        <small>
+                            Enter the number of portions available.
+                        </small>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="reset"
+                            class="cancel-btn"
+                        >
+                            Cancel
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="add-dish-btn"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                            Add Dish
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Nivora Eats. All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
