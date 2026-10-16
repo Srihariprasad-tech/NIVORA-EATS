@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cook Dashboard | Nivora Eats</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="my-foods.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <img src="img_logo.jpeg" alt="Nivora Eats Logo">
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Dashboard</a>
+            <a href="#">My Foods</a>
+            <a href="#">Orders</a>
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="dashboard">
+
+        <!-- Page Header -->
+
+        <section class="dashboard-header">
+
+            <div>
+                <p class="small-heading">Welcome, Home Cook!</p>
+
+                <h1>My Food Dashboard</h1>
+
+                <p class="dashboard-description">
+                    Manage your homemade dishes, update availability
+                    and keep your menu fresh.
+                </p>
+            </div>
+
+            <a href="add-food.html" class="add-food-btn">
+                <i class="fa-solid fa-plus"></i>
+                Add New Dish
+            </a>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+
+                <div>
+                    <h3>4</h3>
+                    <p>Total Dishes</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon available-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <h3>3</h3>
+                    <p>Available</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon unavailable-icon">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+
+                <div>
+                    <h3>1</h3>
+                    <p>Unavailable</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MY FOODS ================= -->
+
+        <section class="foods-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>My Foods</h2>
+
+                    <p>
+                        Manage the dishes you offer to customers.
+                    </p>
+                </div>
+
+                <a href="add-food.html" class="add-small-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Dish
+                </a>
+
+            </div>
+
+
+            <!-- FOOD CARDS -->
+
+            <div class="food-grid">
+
+
+                <!-- CARD 1 -->
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <img src="misal-pav-2.jpg"
+                            alt="Misal Pav">
+
+                        <span class="status-badge available">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <div class="food-title-row">
+
+                            <h3>Misal Pav</h3>
+
+                            <span class="price">₹120</span>
+
+                        </div>
+
+                        <p class="food-description">
+                            A spicy Maharashtrian classic served
+                            with soft pav.
+                        </p>
+
+
+                        <div class="quantity">
+                            <i class="fa-solid fa-box"></i>
+                            15 portions available
+                        </div>
+
+
+                        <div class="food-actions">
+
+                            <button class="edit-btn">
+                                <i class="fa-solid fa-pen"></i>
+                                Edit
+                            </button>
+
+                            <button class="delete-btn"
+                                onclick="deleteFood(this)">
+                                <i class="fa-solid fa-trash"></i>
+                                Delete
+                            </button>
+
+                        </div>
+
+
+                        <div class="availability">
+
+                            <span>Availability</span>
+
+                            <label class="switch">
+
+                                <input type="checkbox"
+                                    checked
+                                    onchange="toggleAvailability(this)">
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD 2 -->
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <img src="Puran-Poli-2-3.jpg"
+                            alt="Puran Poli">
+
+                        <span class="status-badge available">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <div class="food-title-row">
+
+                            <h3>Puran Poli</h3>
+
+                            <span class="price">₹100</span>
+
+                        </div>
+
+                        <p class="food-description">
+                            Traditional sweet flatbread filled
+                            with jaggery and lentils.
+                        </p>
+
+
+                        <div class="quantity">
+                            <i class="fa-solid fa-box"></i>
+                            10 portions available
+                        </div>
+
+
+                        <div class="food-actions">
+
+                            <button class="edit-btn">
+                                <i class="fa-solid fa-pen"></i>
+                                Edit
+                            </button>
+
+                            <button class="delete-btn"
+                                onclick="deleteFood(this)">
+                                <i class="fa-solid fa-trash"></i>
+                                Delete
+                            </button>
+
+                        </div>
+
+
+                        <div class="availability">
+
+                            <span>Availability</span>
+
+                            <label class="switch">
+
+                                <input type="checkbox"
+                                    checked
+                                    onchange="toggleAvailability(this)">
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD 3 -->
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <img src="paneer-masala.jpg"
+                            alt="Paneer Butter Masala">
+
+                        <span class="status-badge available">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <div class="food-title-row">
+
+                            <h3>Paneer Butter Masala</h3>
+
+                            <span class="price">₹180</span>
+
+                        </div>
+
+                        <p class="food-description">
+                            Creamy paneer cooked in a rich,
+                            mildly spiced tomato gravy.
+                        </p>
+
+
+                        <div class="quantity">
+                            <i class="fa-solid fa-box"></i>
+                            8 portions available
+                        </div>
+
+
+                        <div class="food-actions">
+
+                            <button class="edit-btn">
+                                <i class="fa-solid fa-pen"></i>
+                                Edit
+                            </button>
+
+                            <button class="delete-btn"
+                                onclick="deleteFood(this)">
+                                <i class="fa-solid fa-trash"></i>
+                                Delete
+                            </button>
+
+                        </div>
+
+
+                        <div class="availability">
+
+                            <span>Availability</span>
+
+                            <label class="switch">
+
+                                <input type="checkbox"
+                                    checked
+                                    onchange="toggleAvailability(this)">
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD 4 -->
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <img src="homemade-thali.jpeg"
+                            alt="Homemade Veg Thali">
+
+                        <span class="status-badge unavailable">
+                            Unavailable
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <div class="food-title-row">
+
+                            <h3>Homemade Veg Thali</h3>
+
+                            <span class="price">₹200</span>
+
+                        </div>
+
+                        <p class="food-description">
+                            A wholesome meal with roti, rice,
+                            dal, sabzi and more.
+                        </p>
+
+
+                        <div class="quantity">
+                            <i class="fa-solid fa-box"></i>
+                            0 portions available
+                        </div>
+
+
+                        <div class="food-actions">
+
+                            <button class="edit-btn">
+                                <i class="fa-solid fa-pen"></i>
+                                Edit
+                            </button>
+
+                            <button class="delete-btn"
+                                onclick="deleteFood(this)">
+                                <i class="fa-solid fa-trash"></i>
+                                Delete
+                            </button>
+
+                        </div>
+
+
+                        <div class="availability">
+
+                            <span>Availability</span>
+
+                            <label class="switch">
+
+                                <input type="checkbox"
+                                    onchange="toggleAvailability(this)">
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+            ©️ 2026 Nivora Eats. Homemade food, made with love.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function deleteFood(button) {
+
+            const card = button.closest(".food-card");
+
+            const foodName = card.querySelector("h3").textContent;
+
+            const confirmDelete =
+                confirm("Are you sure you want to delete " + foodName + "?");
+
+            if (confirmDelete) {
+
+                card.remove();
+
+            }
+
+        }
+
+
+        function toggleAvailability(checkbox) {
+
+            const card = checkbox.closest(".food-card");
+
+            const statusBadge =
+                card.querySelector(".status-badge");
+
+            if (checkbox.checked) {
+
+                statusBadge.textContent = "Available";
+
+                statusBadge.classList.remove("unavailable");
+
+                statusBadge.classList.add("available");
+
+            } else {
+
+                statusBadge.textContent = "Unavailable";
+
+                statusBadge.classList.remove("available");
+
+                statusBadge.classList.add("unavailable");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
