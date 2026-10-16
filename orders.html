@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders | Nivora Eats</title>
+  <link rel="stylesheet" href="orders.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="brand">
+      <img src="img_logo.jpeg" alt="Nivora Eats">
+      
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="food-list.html">Explore Food</a>
+      <a href="address.html">My Addresses</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <p class="eyebrow">YOUR FOOD JOURNEY</p>
+      <h1>My Orders</h1>
+      <p>Track your orders and enjoy homemade food.</p>
+    </section>
+
+    <div class="filter-tabs">
+      <button class="active">All Orders</button>
+      <button>Active</button>
+      <button>Delivered</button>
+      <button>Cancelled</button>
+    </div>
+
+    <section class="orders-list">
+
+      <article class="order-card">
+        <div class="order-top">
+          <div>
+            <span class="order-label">ORDER ID</span>
+            <h3>#NIV1024</h3>
+            <p class="muted">Placed on 15 Oct 2026</p>
+          </div>
+          <span class="status preparing">Preparing</span>
+        </div>
+
+        <div class="food-row">
+          <div class="food-placeholder">🍱</div>
+          <div class="food-info">
+            <h3>Homemade Maharashtrian Thali</h3>
+            <p>By Aai's Kitchen</p>
+            <p>Quantity: 1</p>
+          </div>
+          <strong>₹180</strong>
+        </div>
+
+        <div class="tracking">
+          <div class="tracking-step completed">
+            <span>✓</span>
+            <p>Order placed</p>
+          </div>
+          <div class="tracking-line completed-line"></div>
+          <div class="tracking-step current">
+            <span>2</span>
+            <p>Preparing</p>
+          </div>
+          <div class="tracking-line"></div>
+          <div class="tracking-step">
+            <span>3</span>
+            <p>On the way</p>
+          </div>
+          <div class="tracking-line"></div>
+          <div class="tracking-step">
+            <span>4</span>
+            <p>Delivered</p>
+          </div>
+        </div>
+
+        <div class="order-bottom">
+          <p>Total paid: <strong>₹210</strong></p>
+          <button class="btn btn-outline" type="button">View Details</button>
+        </div>
+      </article>
+
+      <article class="order-card">
+        <div class="order-top">
+          <div>
+            <span class="order-label">ORDER ID</span>
+            <h3>#NIV1018</h3>
+            <p class="muted">Placed on 12 Oct 2026</p>
+          </div>
+          <span class="status delivered">Delivered</span>
+        </div>
+
+        <div class="food-row">
+          <div class="food-placeholder">🥘</div>
+          <div class="food-info">
+            <h3>Paneer Sabji with Roti</h3>
+            <p>By Ghar Ka Swaad</p>
+            <p>Quantity: 1</p>
+          </div>
+          <strong>₹150</strong>
+        </div>
+
+        <div class="delivery-note">
+          ✓ Delivered successfully
+        </div>
+
+        <div class="order-bottom">
+          <p>Total paid: <strong>₹180</strong></p>
+          <div class="button-group">
+            <a class="btn btn-primary" href="reviews.html">Rate Order</a>
+            <button class="btn btn-outline" type="button">Reorder</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="order-card">
+        <div class="order-top">
+          <div>
+            <span class="order-label">ORDER ID</span>
+            <h3>#NIV1009</h3>
+            <p class="muted">Placed on 10 Oct 2026</p>
+          </div>
+          <span class="status cancelled">Cancelled</span>
+        </div>
+
+        <div class="food-row">
+          <div class="food-placeholder">🍛</div>
+          <div class="food-info">
+            <h3>Dal Rice Meal</h3>
+            <p>By Homemade Meals</p>
+            <p>Quantity: 1</p>
+          </div>
+          <strong>₹120</strong>
+        </div>
+
+        <div class="order-bottom">
+          <p class="muted">Order cancelled</p>
+          <button class="btn btn-outline" type="button">View Details</button>
+        </div>
+      </article>
+
+    </section>
+
+    <div class="back-link">
+      <a href="food-list.html">← Continue exploring food</a>
+    </div>
+  </main>
+
+  <footer>
+    Made with care, just like homemade food. © 2026 Nivora Eats
+  </footer>
+
+</body>
+</html>
